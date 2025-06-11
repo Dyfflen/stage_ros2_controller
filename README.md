@@ -12,16 +12,16 @@
 #### Terminal 1:
 ```
 cd <your_workspace>
-source install/setup.bash
 colcon build
+source install/setup.bash
 ros2 launch stage_ros2 stage.launch.py world:=new_cave enforce_prefixes:=false one_tf_tree:=true
 ```
 
 ## To run the controller:
 ```
 cd <your_workspace>
-source install/setup.bash
 colcon build
+source install/setup.bash
 ros2 run stage_navigation robot_navigation_node
 ```
 
