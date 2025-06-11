@@ -1,5 +1,6 @@
 ## Disciplina de Tópicos em Sistemas Robóticos
 ### Autor: Kauã Dalla Riva Cucco Barbosa
+### Youtube video: [Stage ROS 2 Humble Controller - Robot Navigation](https://youtu.be/6ZxkkbWP5CE)
 
 ## Dependencies:
 
