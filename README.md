@@ -28,7 +28,7 @@ ros2 run stage_navigation robot_navigation_node
 ### Changing the Waypoints:
 To modify the waypoints, follow these steps:
 1. **Enable or disable odometry:**
-   Edit line 39 of the file:
+   Edit line 37 of the file:
    `stage_navigation/stage_navigation/robot_navigation_node.py`
    
    Choose whether the simulator will use odometry.
@@ -36,7 +36,7 @@ To modify the waypoints, follow these steps:
 3. **If odometry is enabled:**
 
    * Open `state_estimator.py` and update the target points.
-   * Replace the corresponding values in lines 41–44 of `robot_navigation_node.py` with the updated estimated error values of the target points.
+   * Replace the corresponding values in lines 39–42 of `robot_navigation_node.py` with the updated estimated error values of the target points.
 
 4. **Update the final target points:**
-   Modify lines 50–53 in `robot_navigation_node.py` to reflect the new waypoints.
+   Modify lines 48–51 in `robot_navigation_node.py` to reflect the new waypoints (target that the robot will actually reach).
