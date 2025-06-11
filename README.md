@@ -18,6 +18,7 @@ ros2 launch stage_ros2 stage.launch.py world:=new_cave enforce_prefixes:=false o
 ```
 
 ## To run the controller:
+#### Terminal 2:
 ```
 cd <your_workspace>
 colcon build
