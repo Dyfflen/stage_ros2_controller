@@ -3,7 +3,8 @@
 import rclpy
 import math
 import numpy as np
-from rclpy.node import Node, Time
+from rclpy.node import Node
+from rclpy.time import Time
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
@@ -51,24 +52,23 @@ class RobotNavigationNode(Node):
         self.set_target_2b = 7.0
 
         self.goals = [(self.set_target_1a + self.estimated_error_target_1a, self.set_target_1b + self.estimated_error_target_1b), (self.set_target_2a + self.estimated_error_target_2a, self.set_target_2b + self.estimated_error_target_2b)]
-        self.current_goal_index = 0.0
         self.goal_tolerance = 0.02
         self.robot_speed = 0.3
         self.turn_speed = 0.4
-        
         self.state = 'start'
         self.prev_state = ''
-        self.goal_reached_time = None
         self.safe_distance = 1.2
         self.critical_distance = 0.8
         self.wall_follow_distance = 1.0
         self.wall_follow_start_time = None
+        self.goal_reached_time = None
         self.emergency_distance = 0.1
         self.front_sector_angles = [-30, -15, 0, 15, 30]
         self.hit_points = []
         self.leave_points = []
         self.target_theta = 0.0
-        self.stuck_counter = 0.0
+        self.current_goal_index = 0
+        self.stuck_counter = 0
         
         self.get_logger().info('Robot Navigation Node initialized')
         self.get_logger().info(f'Starting position: ({self.current_x}, {self.current_y})')
