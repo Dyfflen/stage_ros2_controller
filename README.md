@@ -7,7 +7,8 @@
 - Ubuntu 22.04 (Jammy Jellyfish) – 64 bits.
 - ROS 2 Humble: [to install humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html).
 - Follow [step by step](https://github.com/viniciuslg91/stage/blob/main/README.md).
-- This repository must be located in the `/src` folder of your ROS 2 Humble workspace. The other two Stage packages (from the previous step) must also be in the same `src` directory.
+- This repository must be located in the `/src folder of your ROS 2 Humble workspace. The other two Stage packages (from the previous step) must also be in the same `src` directory.
+- Comment out **line 62** of `new_cave .world` > `(# my_block( pose [7 7 0 180.000 ] color "green")`, so as not to create an obstacle at point (7.0, 7.0) and cause conflict.
 
 ## To run the launch:
 #### Terminal 1:
